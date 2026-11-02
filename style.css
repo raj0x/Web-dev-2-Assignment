@@ -1,0 +1,311 @@
+/* General page styles */
+:root {
+  --blue: #0750b5;
+  --blue-dark: #0647a3;
+  --page-bg: #f4f4f4;
+  --text: #111827;
+  --line: #a5a5a5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--page-bg);
+  color: var(--text);
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 12px;
+}
+
+/* Header and navigation */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  min-height: 50px;
+  padding: 6px 12px 7px;
+  background: var(--blue);
+  color: white;
+  text-align: center;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.45;
+  font-weight: 700;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  line-height: 1.4;
+}
+
+nav a {
+  color: white;
+  padding: 0 1px;
+  text-decoration: none;
+  font-size: 9px;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  color: #d6e7ff;
+  text-decoration: underline;
+}
+
+/* Sections and CSS box model */
+.section {
+  padding: 17px 16px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  margin: 0 0 12px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+hr {
+  margin: 0;
+  border: 0;
+  border-top: 1px solid var(--line);
+}
+
+.about {
+  padding-top: 0;
+  padding-bottom: 20px;
+}
+
+.about h2 {
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+
+.profile-photo {
+  display: block;
+  width: 256px;
+  height: 256px;
+  max-width: 75vw;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.about p {
+  margin: 0 auto 0;
+  font-size: 9px;
+  line-height: 1.7;
+}
+
+/* Skills table */
+.skills {
+  padding-top: 25px;
+  padding-bottom: 14px;
+}
+
+.skills h2 {
+  margin-bottom: 10px;
+}
+
+table {
+  width: min(355px, 95%);
+  margin: 0 auto;
+  border-collapse: collapse;
+  border: 1px solid var(--blue);
+  text-align: center;
+  font-size: 9px;
+}
+
+th,
+td {
+  padding: 5px 8px;
+  border: 1px solid var(--blue);
+}
+
+th {
+  background: var(--blue);
+  color: #fff;
+  font-weight: 700;
+}
+
+tbody tr:nth-child(even) {
+  background: #e9e9e9;
+}
+
+/* Project cards */
+.projects {
+  padding-top: 24px;
+  padding-bottom: 20px;
+}
+
+.projects h2 {
+  margin-bottom: 10px;
+}
+
+.project-card {
+  width: min(372px, 95%);
+  min-height: 69px;
+  margin: 0 auto 5px;
+  padding: 14px 12px 12px;
+  background: #fff;
+  border: 1px solid #d5d5d5;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 3%);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 8%);
+}
+
+.project-card h3 {
+  margin: 0 0 7px;
+  font-size: 10px;
+}
+
+.project-card p {
+  margin: 0;
+  font-size: 9px;
+}
+
+/* Contact form and buttons */
+.contact {
+  padding-top: 25px;
+  padding-bottom: 10px;
+}
+
+.contact h2 {
+  margin-bottom: 10px;
+}
+
+form {
+  width: min(355px, 95%);
+  margin: 0 auto;
+  border: 1px solid var(--blue);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  min-height: 27px;
+  border-bottom: 1px solid var(--blue);
+  text-align: left;
+}
+
+.form-row label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-right: 1px solid var(--blue);
+  font-size: 8px;
+}
+
+.form-row input,
+.form-row textarea {
+  align-self: center;
+  width: calc(100% - 25px);
+  margin: 3px 12px;
+  padding: 3px 5px;
+  border: 1px solid #888;
+  border-radius: 0;
+  background: white;
+  color: #222;
+  font: 8px Arial, sans-serif;
+}
+
+.form-row input {
+  height: 19px;
+}
+
+.form-row textarea {
+  min-height: 27px;
+  resize: vertical;
+}
+
+.message-row {
+  min-height: 33px;
+}
+
+.submit-row {
+  padding: 7px 10px 6px;
+}
+
+button {
+  display: block;
+  width: 34%;
+  margin: 0 auto;
+  padding: 5px 12px;
+  border: 0;
+  border-radius: 3px;
+  background: var(--blue);
+  color: white;
+  font: 600 8px "Poppins", Arial, sans-serif;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: var(--blue-dark);
+  transform: translateY(-1px);
+}
+
+.form-status {
+  margin: 0;
+  padding: 0 8px 5px;
+  font-size: 9px;
+}
+
+/* Footer and fixed back-to-top control */
+.site-footer {
+  height: 8px;
+  background: var(--blue);
+}
+
+.back-to-top {
+  position: fixed;
+  right: 12px;
+  bottom: 12px;
+  z-index: 20;
+  padding: 7px 18px;
+  border-radius: 3px;
+  background: var(--blue);
+  color: white;
+  text-decoration: none;
+  font-size: 9px;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 10%);
+}
+
+.back-to-top:hover {
+  background: var(--blue-dark);
+}
+
+@media (max-width: 480px) {
+  .profile-photo {
+    width: 220px;
+    height: 220px;
+  }
+
+  .section {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .back-to-top {
+    right: 8px;
+    bottom: 8px;
+    padding: 7px 10px;
+  }
+}
