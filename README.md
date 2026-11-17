@@ -12,5 +12,3 @@
 
 ## Notes
 The contact form is a front-end demo: it validates the fields and displays a message, but does not send email without a backend.
-
-This repository is created for CSE103 Lab 3.
